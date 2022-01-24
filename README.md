@@ -1,4 +1,4 @@
-# Program Manager Read Me
+# Product Manager Read Me
 
 Sumnary: Full Stack MERN application with CRUD capability
 

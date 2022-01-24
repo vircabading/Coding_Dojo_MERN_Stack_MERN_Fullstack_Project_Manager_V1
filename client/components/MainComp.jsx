@@ -5,7 +5,6 @@ import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
 //  MAIN COMPONENT
 ////////////////////////////////////////////////////
 
-
 /**
  * //// MAIN COMPONENT //////////////////////////////////////
  * @returns HTML for Main Body
