@@ -1,6 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
 
+import AllJokes from './AllJokesComp';
+
 ////////////////////////////////////////////////////
 //  MAIN COMPONENT
 ////////////////////////////////////////////////////
@@ -17,6 +19,7 @@ const Main = () => {
                 <div className='row bg-dark p-3 rounded'>
                     <div className="col">
                         <h1>Welcome to Main</h1>
+                        <AllJokes />
                     </div>
                 </div>
             </div>
