@@ -6,21 +6,31 @@ import axios from 'axios';
 ////////////////////////////////////////////////////
 
 const AllJokes = () => {
-    const [ message, setMessage] = useState("Loading ⏳ ⏳ ⏳")
+    const [ jokes, setJokes] = useState("Loading ⏳ ⏳ ⏳")
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/jokes")
             .then( res => {
-                console.log("*** In axios get /api/jokes *** res.data:", JSON.stringify(res.data));
-                setMessage(res.data);
+                console.log("*** In axios get /api/jokes *** res.data.jokes:", JSON.stringify(res.data.jokes));
+                setJokes(res.data.jokes);
             })
     }, []);
 
     return (
         <div>
             <h2>
-            All Jokes: {message}
+            All Jokes: 
             </h2>
+            {/* <p>Jokes: {JSON.stringify(jokes)}</p> */}
+            {
+                jokes.map((joke, idx) => {
+                    return <div>
+                            <p key={idx} className='text-warning'>Setup: {joke.setup}</p>
+                            <p key={idx}>PunchLine: {joke.punchline}</p>
+                        </div>
+                })
+            }
+
         </div>
     );
 };
