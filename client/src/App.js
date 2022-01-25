@@ -1,8 +1,8 @@
 import './App.css';
-import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch } from 'react-router-dom';
 
 import NavBar from './components/NavbarComp';
-import Main from './components/MainComp';
+import Main from './views/MainView';
 
 ////////////////////////////////////////////////////
 //  ROOT APPLICATION

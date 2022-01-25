@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 ////////////////////////////////////////////////////
 //  NAVIGATION BAR COMPONENT
@@ -20,7 +20,7 @@ const NavBar = () => {
                     <h2 className='text-warning'><strong>Product Manager 🏭</strong></h2>
                     {/* **** Link to The Root of the Site ******** */}
                     <Link to="/">
-                        <button className='btn btn-secondary round'><strong>Home</strong></button>
+                        <button className='btn btn-sm btn-secondary round'><strong>Home</strong></button>
                     </Link>
                 </div>
             </div>
