@@ -29,13 +29,21 @@ const Main = () => {
                         <Route exact path="/products">
                             <Home />
                         </Route>
-                        {/* **** Create Route ******** */}
+                        {/* **** Create Product Route ******** */}
                         <Route exact path="/products/new">
                             <AddProduct />
                         </Route>
                         {/* **** Retrieve Product Route ********* */}
                         <Route path="/products/:id/retrieve">
                             <ProductView />
+                        </Route>
+                        {/* **** Update Product Route ********* */}
+                        <Route path="/products/:id/update">
+                            
+                        </Route>
+                        {/* **** Delete Product Route ********* */}
+                        <Route path="/products/:id/delete">
+                            
                         </Route>
                     </div>
                 </div>
