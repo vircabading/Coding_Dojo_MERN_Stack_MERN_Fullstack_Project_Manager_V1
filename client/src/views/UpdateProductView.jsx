@@ -1,0 +1,14 @@
+import React from 'react';
+
+////////////////////////////////////////////////////
+//  UPDATE PRODUCT VIEW
+////////////////////////////////////////////////////
+
+const UpdateProductView = () => {
+  
+  return (<div>
+
+  </div>);
+};
+
+export default UpdateProductView;
