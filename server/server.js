@@ -16,7 +16,7 @@ app.use(cors());    // enable Cross Origin Requests in Project
 require("./config/mongoose.config");
 
 // This is where we import the users routes function from our user.routes.js file
-const AllMyJokeRoutes = require("./routes/joke.routes");
-AllMyJokeRoutes(app);
+const AllMyProductRoutes = require("./routes/product.routes");
+AllMyProductRoutes(app);
 
 app.listen(PORT, () => console.log(`🦄🦄🦄 The server is all fired up on port ${PORT} 🦄🦄🦄`));
