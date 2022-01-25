@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-
+import { useParams } from 'react-router-dom';
 
 ////////////////////////////////////////////////////
 //  UPDATE PRODUCT VIEW
@@ -8,6 +8,7 @@ import React, { useState, useEffect} from 'react';
 const UpdateProductView = () => {
     // //// FIELDS /////////////////////////////////
     const [product, setProduct] = useState(null);
+    const { id } = useParams();
 
     // //// OUTPUT /////////////////////////////////
     return ( 
@@ -15,7 +16,7 @@ const UpdateProductView = () => {
         ?   <div >
                 <h2>Update Product:</h2>
             </div >
-        :   <div>Loadihg Product Update ⌛ ⏳ ⏳</div>
+        :   <div>Loadihg Product { id } Update ⌛ ⏳ ⏳</div>
     );
 };
 

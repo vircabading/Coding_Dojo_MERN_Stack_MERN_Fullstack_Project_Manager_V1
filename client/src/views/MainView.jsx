@@ -6,6 +6,7 @@ import Home from './HomeView';
 import AddProduct from './AddProductView';
 import ProductView from './ProductView';
 import UpdateProductView from './UpdateProductView';
+import DeleteProductComp from '../components/DeleteProductComp';
 
 ////////////////////////////////////////////////////
 //  MAIN VIEW
@@ -44,7 +45,7 @@ const Main = () => {
                         </Route>
                         {/* **** Delete Product Route ********* */}
                         <Route path="/products/:id/delete">
-                            
+                            <DeleteProductComp />
                         </Route>
                     </div>
                 </div>
