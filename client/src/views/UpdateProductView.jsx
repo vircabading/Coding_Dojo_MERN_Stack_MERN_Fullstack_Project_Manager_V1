@@ -18,8 +18,8 @@ const UpdateProductView = () => {
             .catch(err => console.log("⚠⚠⚠ ERROR FOUND when retrieving product ⚠⚠⚠"))
     }, [])
 
-    const handleSubmit = () => {
-        
+    const handleSubmit = (e) => {
+        e.preventDefault();
     }
 
     // //// OUTPUT /////////////////////////////////
@@ -52,7 +52,7 @@ const UpdateProductView = () => {
                             />
                     </div>
                     <button type="submit" class="btn btn-warning mt-2 round">
-                        <strong>📝 Edit Product</strong>
+                        <strong>✍🏼 Edit Product</strong>
                     </button>
                 </form>
             </div >
