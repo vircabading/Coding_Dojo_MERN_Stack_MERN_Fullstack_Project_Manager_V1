@@ -59,7 +59,7 @@ const AllProducts = () => {
                                         <Link   className='col'
                                                 to={ "/products/" + product._id + "/delete" } >
                                             <button className='btn btn-sm btn-danger round'>
-                                                <strong>⛔ Delete</strong>
+                                                <strong>🧨 Delete</strong>
                                             </button>
                                         </Link>
                                     </td>

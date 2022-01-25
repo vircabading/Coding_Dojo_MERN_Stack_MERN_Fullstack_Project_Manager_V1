@@ -18,9 +18,13 @@ const UpdateProductView = () => {
             .catch(err => console.log("⚠⚠⚠ ERROR FOUND when retrieving product ⚠⚠⚠"))
     }, [])
 
+    // //// SUBMIT UTILITY /////////////////////////
+
     const handleSubmit = (e) => {
         e.preventDefault();
     }
+
+    // //// ON CHANGE UTILITY //////////////////////
 
     const handleChangeTitle = (e) => {
         setProduct({
@@ -38,11 +42,19 @@ const UpdateProductView = () => {
         });
     }
 
+    const handleChangeDescription = (e) => {
+        setProduct({
+            title: product.title,
+            price: product.price,
+            description: e.target.value
+        });
+    }
+
     // //// OUTPUT /////////////////////////////////
     return (
         product
             ? <div >
-                <h2>Update Product:</h2>
+                <h2>Update Product 📝:</h2>
                 <p>{JSON.stringify(product)}</p>
                 <hr />
                 <form onSubmit={e => handleSubmit(e)} >
@@ -59,6 +71,7 @@ const UpdateProductView = () => {
                         <input type="number" className="form-control"
                             id="price" min=".01" step="0.01"
                             value={ product.price }
+                            onChange={e =>handleChangePrice(e)}
                             />
                     </div>
                     <div className="form-group mb-2">
@@ -66,6 +79,7 @@ const UpdateProductView = () => {
                         <textarea className="form-control"
                             id="description" rows="3"
                             value={ product.description }
+                            onChange={e => handleChangeDescription(e)}
                             />
                     </div>
                     <button type="submit" class="btn btn-warning mt-2 round">
