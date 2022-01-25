@@ -18,10 +18,7 @@ const ProductView = () => {
     // //// GET PRODUCT FROM API //////////////////
     useEffect(() => {
         axios.get("http://localhost:8000/api/products/" + id)
-            .then(response => {
-                console.log("Product:", JSON.stringify(response.data.product));
-                setProduct(response.data.product);
-            })
+            .then(response => setProduct(response.data.product))
             .catch(error => {
                 console.log("⚠⚠⚠ ERROR FOUND when looking for product ⚠⚠⚠")
             });
