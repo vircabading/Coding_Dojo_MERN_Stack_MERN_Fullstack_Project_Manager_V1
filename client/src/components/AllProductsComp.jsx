@@ -13,10 +13,7 @@ const AllProducts = () => {
     // //// GET ALL PRODUCTS FROM API //////////////
     useEffect(() => {
         axios.get("http://localhost:8000/api/products")
-            .then(response => {
-                console.log("Products:", JSON.stringify(response.data.products));
-                setProducts(response.data.products);
-            })
+            .then(response => setProducts(response.data.products))
             .catch(error => {
                 console.log("⚠⚠⚠ ERROR FOUND when looking for products ⚠⚠⚠")
             });
