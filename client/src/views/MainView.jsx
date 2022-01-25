@@ -5,6 +5,7 @@ import HomeRedirectComp from '../components/HomeRedirectComp';
 import Home from './HomeView';
 import AddProduct from './AddProductView';
 import ProductView from './ProductView';
+import UpdateProductView from './UpdateProductView';
 
 ////////////////////////////////////////////////////
 //  MAIN VIEW
@@ -39,7 +40,7 @@ const Main = () => {
                         </Route>
                         {/* **** Update Product Route ********* */}
                         <Route path="/products/:id/update">
-                            
+                            <UpdateProductView />
                         </Route>
                         {/* **** Delete Product Route ********* */}
                         <Route path="/products/:id/delete">

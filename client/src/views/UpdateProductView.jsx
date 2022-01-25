@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
+
 
 ////////////////////////////////////////////////////
 //  UPDATE PRODUCT VIEW
 ////////////////////////////////////////////////////
 
 const UpdateProductView = () => {
-  
-  return (<div>
+    // //// FIELDS /////////////////////////////////
+    const [product, setProduct] = useState(null);
 
-  </div>);
+    // //// OUTPUT /////////////////////////////////
+    return ( 
+        product 
+        ?   <div >
+                <h2>Update Product:</h2>
+            </div >
+        :   <div>Loadihg Product Update ⌛ ⏳ ⏳</div>
+    );
 };
 
 export default UpdateProductView;
