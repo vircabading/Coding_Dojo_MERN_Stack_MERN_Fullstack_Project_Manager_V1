@@ -22,6 +22,22 @@ const UpdateProductView = () => {
         e.preventDefault();
     }
 
+    const handleChangeTitle = (e) => {
+        setProduct({
+            title: e.target.value,
+            price: product.price,
+            description: product.description
+        });
+    }
+
+    const handleChangePrice = (e) => {
+        setProduct({
+            title: product.title,
+            price: e.target.value,
+            description: product.description
+        });
+    }
+
     // //// OUTPUT /////////////////////////////////
     return (
         product
@@ -35,6 +51,7 @@ const UpdateProductView = () => {
                         <input type="text" className="form-control"
                             id="title" 
                             value={ product.title }
+                            onChange={e => handleChangeTitle(e)}
                             />
                     </div>
                     <div className="form-group mb-2">

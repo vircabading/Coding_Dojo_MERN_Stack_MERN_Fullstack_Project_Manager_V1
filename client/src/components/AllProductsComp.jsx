@@ -38,7 +38,7 @@ const AllProducts = () => {
                                 return (<tr key={idx}>
                                     <th scope="row">{idx + 1}</th>
                                     <td>
-                                        <Link   className='text-info'
+                                        <Link   className='text-white'
                                                 to={ "/products/" + product._id + "/retrieve" } >
                                             {product.title}
                                         </Link>
