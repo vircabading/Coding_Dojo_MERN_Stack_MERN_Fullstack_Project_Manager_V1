@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, Route } from 'react-router-dom';
 
+import HomeRedirectComp from '../components/HomeRedirectComp';
 import Home from './HomeView';
 import AddProduct from './AddProductView';
 import ProductView from './ProductView';
@@ -20,13 +21,20 @@ const Main = () => {
             <div className='container mt-4'>
                 <div className='row bg-dark p-3 rounded'>
                     <div className="col">
+                        {/* **** Root Re-Directs to Home Route ******** */}
                         <Route exact path="/">
+                            <HomeRedirectComp />
+                        </Route>
+                        {/* **** Home Route ******** */}
+                        <Route exact path="/products">
                             <Home />
                         </Route>
-                        <Route exact path="/new">
+                        {/* **** Create Route ******** */}
+                        <Route exact path="/products/new">
                             <AddProduct />
                         </Route>
-                        <Route path="/:id">
+                        {/* **** Retrieve Product Route ********* */}
+                        <Route path="/products/:id/retrieve">
                             <ProductView />
                         </Route>
                     </div>

@@ -31,7 +31,7 @@ const AllProducts = () => {
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col-2">Product</th>
-                            <th scope="col">Price</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody className='text-white'>
@@ -41,11 +41,31 @@ const AllProducts = () => {
                                 return (<tr key={idx}>
                                     <th scope="row">{idx + 1}</th>
                                     <td>
-                                        <Link to={ destination } className='text-info'>
+                                        <Link   className='text-info'
+                                                to={ "/products/" + product._id + "/retrieve" } >
                                             {product.title}
                                         </Link>
                                     </td>
-                                    <td>${parseFloat(product.price).toFixed(2)}</td>
+                                    <td className='row'>
+                                        <Link   className='col'
+                                                to={ "/products/" + product._id + "/retrieve" }>
+                                            <button className='btn btn-sm btn-success round' >
+                                                <strong>🔎 View</strong>
+                                            </button>
+                                        </Link>
+                                        <Link   className='col'
+                                                to={ "/products/" + product._id + "/update" }>
+                                            <button className='btn btn-sm btn-warning round' >
+                                                <strong>✍🏼 Edit</strong>
+                                            </button>
+                                        </Link>
+                                        <Link   className='col'
+                                                to={ "/products/" + product._id + "/delete" } >
+                                            <button className='btn btn-sm btn-danger round'>
+                                                <strong>⛔ Delete</strong>
+                                            </button>
+                                        </Link>
+                                    </td>
                                 </tr>);
                             })
                         }

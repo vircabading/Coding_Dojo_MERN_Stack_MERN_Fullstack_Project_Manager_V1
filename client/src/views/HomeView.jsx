@@ -16,8 +16,8 @@ const Home = () => {
     return (<div>
         <div className='d-flex flex-row justify-content-between align-items-center'>
             <h1>Welcome to Product Manager 📃</h1>
-            <Link to={"/new"}>
-                <button className='btn btn-sm btn-success round'>
+            <Link to={"/products/new"}>
+                <button className='btn btn-success round'>
                     <strong>➕ Add New Product</strong>
                 </button>
             </Link>
