@@ -37,7 +37,6 @@ module.exports.createProduct = (req, res) => {
  * @returns JSON with a List of Products
  */
 module.exports.findAllProducts = (req, res) => {
-    console.log("🎈🎈🎈 In Find All Products 🎈🎈🎈");
     Product.find()
         .then( allProducts => 
             res.json({
