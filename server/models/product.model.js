@@ -14,7 +14,7 @@ const ProductSchema = new mongoose.Schema({
     }, 
     price: {
         type: Number,
-        min: 1
+        min: 0.01
     },
     description: {
         type: String

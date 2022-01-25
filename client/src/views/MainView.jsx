@@ -3,6 +3,7 @@ import { Link, Route } from 'react-router-dom';
 
 import Home from './HomeView';
 import AddProduct from './AddProductView';
+import ProductView from './ProductView';
 
 ////////////////////////////////////////////////////
 //  MAIN VIEW
@@ -19,11 +20,14 @@ const Main = () => {
             <div className='container mt-4'>
                 <div className='row bg-dark p-3 rounded'>
                     <div className="col">
+                        <Route exact path="/">
+                            <Home />
+                        </Route>
                         <Route exact path="/new">
                             <AddProduct />
                         </Route>
-                        <Route exact path="/">
-                            <Home />
+                        <Route path="/:id">
+                            <ProductView />
                         </Route>
                     </div>
                 </div>

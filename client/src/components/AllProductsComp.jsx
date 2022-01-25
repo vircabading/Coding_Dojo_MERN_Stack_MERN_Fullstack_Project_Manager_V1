@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 ////////////////////////////////////////////////////
 //  ALL PRODUCTS COMPONENT
@@ -36,10 +37,15 @@ const AllProducts = () => {
                     <tbody className='text-white'>
                         {
                             products.map((product, idx) => {
+                                const destination = "/" + product._id
                                 return (<tr key={idx}>
                                     <th scope="row">{idx + 1}</th>
-                                    <td>{ product.title }</td>
-                                    <td>${ parseFloat(product.price).toFixed(2) }</td>
+                                    <td>
+                                        <Link to={ destination } className='text-info'>
+                                            {product.title}
+                                        </Link>
+                                    </td>
+                                    <td>${parseFloat(product.price).toFixed(2)}</td>
                                 </tr>);
                             })
                         }
