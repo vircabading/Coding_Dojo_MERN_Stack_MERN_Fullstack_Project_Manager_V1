@@ -12,8 +12,8 @@ const Product = require("../models/product.model");
  * @param {*} req 
  * @param {*} res 
  */
-module.exports.create = (req, res) => {
-    Product.createProduct(req.body)
+module.exports.createProduct = (req, res) => {
+    Product.create(req.body)
         .then(
             newlyCreatedProduct => res.json({ 
                 product: newlyCreatedProduct,
